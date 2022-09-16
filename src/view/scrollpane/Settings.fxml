@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1195.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.scrollpane.SettingsController">
+   <children>
+      <Pane prefHeight="1195.0" prefWidth="1054.0">
+         <children>
+            <Label alignment="CENTER" layoutX="-36.0" layoutY="181.0" prefHeight="30.0" prefWidth="133.0" rotate="-90.0" text="- CUSTOMER -" textFill="#246698">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-36.0" layoutY="410.0" prefHeight="30.0" prefWidth="133.0" rotate="-90.0" text="- PRODUCTS -" textFill="#246698">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-74.0" layoutY="644.0" prefHeight="30.0" prefWidth="209.0" rotate="-90.0" text="-RICHTEK RIG-" textFill="#246698">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnSupply" layoutX="246.0" layoutY="18.0" prefHeight="3.0" prefWidth="133.0" stylesheets="@../style/style.css" text="Supplies" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="15.0" />
+               </font>
+            </JFXButton>
+            <Pane fx:id="context" layoutX="235.0" layoutY="79.0" prefHeight="1116.0" prefWidth="805.0" />
+            <JFXButton fx:id="btnOrder" layoutX="431.0" layoutY="20.0" onAction="#OrderOnAction" prefHeight="3.0" prefWidth="133.0" stylesheets="@../style/style.css" text="Orders" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnQuotation" layoutX="608.0" layoutY="20.0" prefHeight="3.0" prefWidth="133.0" stylesheets="@../style/style.css" text="Help" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="15.0" />
+               </font>
+            </JFXButton>
+            <Pane fx:id="btnPane" layoutX="11.0" layoutY="552.0" prefHeight="218.0" prefWidth="244.0" stylesheets="@../style/style.css">
+               <children>
+                  <JFXButton fx:id="btnAdd_" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="34.0" onAction="#addOnAction" prefHeight="30.0" prefWidth="120.0" text="Add" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEdit" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="91.0" prefHeight="30.0" prefWidth="120.0" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRemove" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="150.0" prefHeight="30.0" prefWidth="120.0" text="Remove" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="btnPane" layoutX="11.0" layoutY="325.0" prefHeight="218.0" prefWidth="244.0" stylesheets="@../style/style.css">
+               <children>
+                  <JFXButton fx:id="btnAdd_" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="34.0" onAction="#btnLaptopAddOnAction" prefHeight="30.0" prefWidth="120.0" text="Add" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEdit" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="91.0" onAction="#productEditOnAction" prefHeight="30.0" prefWidth="120.0" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRemove" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="150.0" prefHeight="30.0" prefWidth="120.0" text="Remove" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="btnPane" layoutX="16.0" layoutY="96.0" prefHeight="218.0" prefWidth="244.0" stylesheets="@../style/style.css">
+               <children>
+                  <JFXButton fx:id="btnAdd_" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="34.0" onAction="#btnNewCustomerOnAction" prefHeight="30.0" prefWidth="120.0" text="Add" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEdit" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="91.0" onAction="#customerUpdateOnAction" prefHeight="30.0" prefWidth="120.0" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRemove" alignment="CENTER" buttonType="RAISED" layoutX="53.0" layoutY="150.0" prefHeight="30.0" prefWidth="120.0" text="Remove" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

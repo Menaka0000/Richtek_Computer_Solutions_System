@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="769.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MoreDetailsController">
+   <children>
+      <ImageView fitHeight="769.0" fitWidth="627.0" opacity="0.94" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/MoreDetail.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblItemName" alignment="CENTER" layoutX="16.0" layoutY="41.0" prefHeight="35.0" prefWidth="596.0" textFill="#a5b1c2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="txtDetails" focusColor="#394048" layoutX="16.0" layoutY="85.0" prefHeight="666.0" prefWidth="596.0" stylesheets="@style/style.css" unFocusColor="#394048">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextArea>
+      <JFXButton fx:id="btnMinimize" buttonType="RAISED" layoutX="550.0" layoutY="2.0" onAction="#minimize" prefHeight="35.0" prefWidth="38.0" stylesheets="@style/style.css" text="--" textFill="WHITE">
+         <font>
+            <Font name="Arial Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="589.0" layoutY="2.0" onAction="#exitOnAction" prefHeight="35.0" prefWidth="38.0" stylesheets="@style/style.css" text="X" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </JFXButton>
+      <Pane fx:id="pneMove" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="53.0" prefWidth="549.0" />
+   </children>
+</AnchorPane>

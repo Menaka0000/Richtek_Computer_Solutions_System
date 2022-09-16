@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="952.0" prefWidth="1560.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardForUserController">
+   <children>
+      <VBox layoutX="247.0" prefWidth="1070.0" />
+      <ImageView fitHeight="952.0" fitWidth="1560.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assets/DashBoard1.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="PneLeftBar" prefHeight="932.0" prefWidth="250.0" stylesheets="@style/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="pneMove" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="63.0" prefWidth="1560.0" />
+            <VBox layoutY="1.0" prefHeight="896.0" prefWidth="250.0">
+               <children>
+                  <Pane prefHeight="191.0" prefWidth="250.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/home.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="95.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/settings.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnHome" buttonType="RAISED" layoutX="23.0" layoutY="116.0" onAction="#homeOnAction" prefHeight="54.0" prefWidth="54.0" ripplerFill="#236698">
+                           <padding>
+                              <Insets bottom="45.0" />
+                           </padding>
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSettings" buttonType="RAISED" layoutX="98.0" layoutY="116.0" onMouseClicked="#btnSettingsOnAction" prefHeight="54.0" prefWidth="54.0" ripplerFill="#236698">
+                           <padding>
+                              <Insets bottom="45.0" />
+                           </padding>
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="43.0" fitWidth="54.0" layoutX="173.0" layoutY="127.0" onMouseClicked="#cartOnAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/cart.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label fx:id="lblCart" alignment="CENTER" layoutX="191.0" layoutY="114.0" prefHeight="25.0" prefWidth="26.0" style="-fx-background-radius: 60; -fx-background-color: #0984e3;" text="0" textFill="WHITE" />
+                        <Label fx:id="lblCartStatus" layoutX="179.0" layoutY="168.0" text="Updating" textFill="#4db0ff" />
+                     </children>
+                  </Pane>
+                  <ScrollPane fx:id="scrollPane2" prefHeight="712.0" prefWidth="268.0" styleClass="transparent" stylesheets="@style/style.css">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <content>
+                        <GridPane fx:id="grdContainer1" prefHeight="0.0" prefWidth="0.0">
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <Label layoutX="23.0" layoutY="913.0" prefHeight="25.0" prefWidth="127.0" text="DESIGN &amp; DEV BY IJSE" textFill="#6f6f6f" />
+            <Separator layoutX="12.0" layoutY="913.0" opacity="0.39" orientation="VERTICAL" prefHeight="25.0" prefWidth="3.0" />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scrlPane1" layoutX="250.0" layoutY="29.0" prefHeight="804.0" prefWidth="1070.0" stylesheets="@style/style.css">
+         <content>
+            <GridPane fx:id="grdContainer" prefHeight="0.0" prefWidth="0.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="scroll-pane" />
+         </styleClass>
+      </ScrollPane>
+      <Pane fx:id="pneMove1" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="63.0" prefWidth="1560.0">
+         <children>
+            <Pane fx:id="topPane" layoutX="252.0" layoutY="-1.0" opacity="0.2" prefHeight="60.0" prefWidth="1070.0" stylesheets="@style/style.css">
+               <children>
+                  <JFXButton fx:id="btnNewArrivals" buttonType="RAISED" layoutX="24.0" layoutY="8.0" prefHeight="10.0" prefWidth="167.0" stylesheets="@style/style.css" text="New Arrivals" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField layoutX="844.0" layoutY="17.0" opacity="0.75" prefHeight="25.0" prefWidth="176.0" promptText="SEARCH HERE" />
+                  <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="1024.0" layoutY="14.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/search.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <JFXButton fx:id="btnS_Offers" buttonType="RAISED" layoutX="238.0" layoutY="8.0" prefHeight="10.0" prefWidth="167.0" stylesheets="@style/style.css" text="Special Offers" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCafe" buttonType="RAISED" layoutX="589.0" layoutY="8.0" opacity="0.75" prefHeight="43.0" prefWidth="176.0" stylesheets="@style/style.css" text="GAMING CAFE`" textFill="#00efd9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnMinimize" buttonType="RAISED" layoutX="1483.0" layoutY="1.0" onAction="#minimize" prefHeight="35.0" prefWidth="38.0" stylesheets="@style/style.css" text="--" textFill="WHITE">
+         <font>
+            <Font name="Arial Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="1522.0" layoutY="1.0" onAction="#exitOnAction" prefHeight="35.0" prefWidth="38.0" stylesheets="@style/style.css" text="X" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1326.0" layoutY="63.0" prefHeight="828.0" prefWidth="3.0" style="-fx-background-color: #555555;" />
+      <Label alignment="CENTER" layoutX="1332.0" layoutY="913.0" prefHeight="25.0" prefWidth="224.0" text="RICHTEK COMPUTER SOLUTIONS@2021" textFill="#6f6f6f" />
+      <Separator layoutX="1326.0" layoutY="913.0" opacity="0.39" orientation="VERTICAL" prefHeight="25.0" prefWidth="3.0" />
+      <Pane fx:id="contextForFilters" layoutX="1341.0" layoutY="63.0" prefHeight="748.0" prefWidth="203.0" />
+   </children>
+</AnchorPane>

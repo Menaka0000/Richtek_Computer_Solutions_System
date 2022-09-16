@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="952.0" prefWidth="1560.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardForAdminController">
+    <children>
+        <VBox layoutX="247.0" prefWidth="1070.0" />
+        <ImageView fitHeight="952.0" fitWidth="1560.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../assets/DashBoard1.png" />
+            </image>
+        </ImageView>
+        <Pane fx:id="PneLeftBar" prefHeight="932.0" prefWidth="250.0" stylesheets="@style/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane fx:id="pneMove" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="63.0" prefWidth="1560.0" />
+                <VBox layoutY="1.0" prefHeight="896.0" prefWidth="250.0">
+                    <children>
+                        <Pane prefHeight="191.0" prefWidth="250.0" />
+                  <Label prefHeight="35.0" prefWidth="194.0" text="USERS" textFill="#9a9a9a">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton buttonType="RAISED" onAction="#userSettingsOnAction" prefHeight="56.0" prefWidth="247.0" ripplerFill="#246698" style="-fx-border-radius: 5 10 5 10; -fx-border-color: #333846; -fx-border-width: 4; -fx-background-radius: 5 10 5 10;" text="USER SETTINGS" textFill="#a5b1c2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Label prefHeight="35.0" prefWidth="194.0" text="SYSTEM REPORTS" textFill="#9a9a9a">
+                     <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" prefHeight="56.0" prefWidth="247.0" style="-fx-border-radius: 5 10 5 10; -fx-border-color: #333846; -fx-border-width: 4; -fx-background-radius: 5 10 5 10;" text="ANNUAL REPORT" textFill="#a5b1c2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" prefHeight="56.0" prefWidth="247.0" ripplerFill="#246698" style="-fx-border-radius: 5 10 5 10; -fx-border-color: #333846; -fx-border-width: 4; -fx-background-radius: 5 10 5 10;" text="MONTHLY REPORT" textFill="#a5b1c2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="3.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" prefHeight="56.0" prefWidth="247.0" style="-fx-border-radius: 5 10 5 10; -fx-border-color: #333846; -fx-border-width: 4; -fx-background-radius: 5 10 5 10;" text="TODAY SUMMERY" textFill="#a5b1c2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="3.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#switchOnAction" prefHeight="56.0" prefWidth="200.0" style="-fx-border-radius: 5 10 5 10; -fx-border-color: #333846; -fx-border-width: 4; -fx-background-radius: 5 10 5 10;" text="SWITCH TO HOME" textFill="#a5b1c2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="250.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                    </children>
+                </VBox>
+                <Label layoutX="23.0" layoutY="913.0" prefHeight="25.0" prefWidth="127.0" text="DESIGN &amp; DEV BY IJSE" textFill="#6f6f6f" />
+                <Separator layoutX="12.0" layoutY="913.0" opacity="0.39" orientation="VERTICAL" prefHeight="25.0" prefWidth="3.0" />
+            </children>
+        </Pane>
+        <Pane fx:id="pneMove1" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="63.0" prefWidth="1560.0" />
+        <JFXButton fx:id="btnMinimize" buttonType="RAISED" layoutX="1483.0" layoutY="1.0" onAction="#minimize" prefHeight="35.0" prefWidth="38.0" stylesheets="@style/style.css" text="--" textFill="WHITE">
+            <font>
+                <Font name="Arial Italic" size="12.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="1522.0" layoutY="1.0" onAction="#exitOnAction" prefHeight="35.0" prefWidth="38.0" stylesheets="@style/style.css" text="X" textFill="WHITE">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+        </JFXButton>
+        <Label alignment="CENTER" layoutX="1332.0" layoutY="913.0" prefHeight="25.0" prefWidth="224.0" text="RICHTEK COMPUTER SOLUTIONS@2021" textFill="#6f6f6f" />
+        <Separator layoutX="1326.0" layoutY="913.0" opacity="0.39" orientation="VERTICAL" prefHeight="25.0" prefWidth="3.0" />
+        <Pane fx:id="contextForAdmin" layoutX="267.0" layoutY="46.0" prefHeight="787.0" prefWidth="1277.0" />
+    </children>
+</AnchorPane>

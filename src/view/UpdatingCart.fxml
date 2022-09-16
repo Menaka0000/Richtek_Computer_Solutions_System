@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1127.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdatingCartController">
+    <children>
+        <Pane prefHeight="1118.0" prefWidth="1054.0">
+            <children>
+                <Label layoutX="10.0" layoutY="89.0" opacity="0.3" prefHeight="1005.0" prefWidth="1029.0" style="-fx-background-color: black; -fx-background-radius: 5;" />
+                <ScrollPane fx:id="scrollPaneForQuotation" layoutX="37.0" layoutY="157.0" prefHeight="503.0" prefWidth="975.0" stylesheets="@style/style.css">
+                    <styleClass>
+                        <String fx:value="transparent" />
+                        <String fx:value="viewport" />
+                    </styleClass>
+                    <content>
+                        <GridPane fx:id="gridContainer2">
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+                <Label layoutX="14.0" layoutY="25.0" prefHeight="48.0" prefWidth="210.0" text="UPDATING ORDER" textFill="#aeaeae">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="111.0" prefHeight="27.0" prefWidth="104.0" text="Item Types :" textFill="#aeaeae">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblCount" layoutX="158.0" layoutY="111.0" prefHeight="27.0" prefWidth="0.0" textFill="#aeaeae">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="600.0" layoutY="689.0" prefHeight="32.0" prefWidth="104.0" text="Amount :" textFill="#aeaeae">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblGrandTotal" alignment="CENTER_RIGHT" layoutX="744.0" layoutY="689.0" prefHeight="32.0" prefWidth="196.0" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="243.0" layoutY="111.0" prefHeight="30.0" prefWidth="55.0" text="Item " textFill="#aeaeae">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="394.0" layoutY="111.0" prefHeight="30.0" prefWidth="104.0" text="Item Price" textFill="#aeaeae">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="554.0" layoutY="110.0" prefHeight="27.0" prefWidth="55.0" text="Qty" textFill="#aeaeae">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="772.0" layoutY="110.0" prefHeight="30.0" prefWidth="184.0" text="Total Cost per item" textFill="#aeaeae">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="600.0" layoutY="741.0" prefHeight="32.0" prefWidth="104.0" text="Discount :" textFill="#aeaeae">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblDiscount" alignment="CENTER_RIGHT" layoutX="786.0" layoutY="741.0" prefHeight="32.0" prefWidth="152.0" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="737.0" layoutY="783.0" prefHeight="3.0" prefWidth="210.0" style="-fx-background-color: #aeaeae;">
+                    <font>
+                        <Font size="1.0" />
+                    </font>
+                </Label>
+                <Label layoutX="737.0" layoutY="845.0" prefHeight="3.0" prefWidth="210.0" style="-fx-background-color: #aeaeae;">
+                    <font>
+                        <Font size="1.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblNetTotal" alignment="CENTER_RIGHT" layoutX="742.0" layoutY="802.0" prefHeight="32.0" prefWidth="196.0" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <JFXButton fx:id="btnQuotation" buttonType="RAISED" layoutX="528.0" layoutY="1024.0" onAction="#quotationViaMailOnAction" prefHeight="30.0" prefWidth="141.0" text="Quotation VIa Mail">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="689.0" layoutY="1024.0" onAction="#updateOnAction" prefHeight="27.0" prefWidth="119.0" text="Update">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="828.0" layoutY="1024.0" onAction="#CancelOnAction" prefHeight="27.0" prefWidth="119.0" text="Cancel">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnNewCustomer" buttonType="RAISED" layoutX="864.0" layoutY="929.0" onAction="#addOnAction" prefHeight="9.0" prefWidth="83.0" text="Add" />
+                <Label fx:id="lblCustomerName" alignment="CENTER_RIGHT" layoutX="582.0" layoutY="878.0" prefHeight="32.0" prefWidth="196.0" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="cmbCustomer" focusColor="#464646" layoutX="795.0" layoutY="881.0" prefHeight="25.0" prefWidth="152.0" promptText=" SELECT CUSTOMER" stylesheets="@style/style.css" unFocusColor="#464646" />
+            <JFXButton fx:id="btnNewCart" layoutX="930.0" layoutY="37.0" onAction="#newCartOnAction" prefHeight="25.0" prefWidth="104.0" text="New Cart" />
+            <ImageView fitHeight="19.0" fitWidth="27.0" layoutX="572.0" layoutY="748.0" onMouseClicked="#discountSettingsOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/settings.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblDiscountPercentage" alignment="CENTER_RIGHT" layoutX="709.0" layoutY="741.0" prefHeight="32.0" prefWidth="73.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDiscountPer" layoutX="514.0" layoutY="745.0" onKeyReleased="#keyReleased" opacity="0.7" prefHeight="25.0" prefWidth="55.0" />
+            </children>
+        </Pane>
+    </children>
+</VBox>
