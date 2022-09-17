@@ -1,5 +1,5 @@
 # Richtek Computer Solution's System
-**This is a standalone application that implements using the technologies as follows,**<br>
+**This is a standalone application that is developed by myself using the technologies as follows.,**<br>
 &nbsp;   &nbsp;   &nbsp;   &nbsp; Language - *Java* <br>
 &nbsp;   &nbsp;   &nbsp;   &nbsp; Front-End - *JavaFX* <br>
 &nbsp;   &nbsp;   &nbsp;   &nbsp; DataBase - *MySQL*<br>
